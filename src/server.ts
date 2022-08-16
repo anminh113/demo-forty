@@ -4,13 +4,9 @@ import "dotenv/config";
 import app from "./app";
 import bcrypt from "bcryptjs";
 
-
+const connectionString = process.env.DATABASE_URL;
 const client = new Client({
-  user: process.env.PG_USER,
-  host: process.env.PG_HOST,
-  database: process.env.PG_DATABASE,
-  password: process.env.PG_PASSWORD,
-  port: parseFloat(process.env.PG_PORT)
+  connectionString
 });
 
 client.connect();
