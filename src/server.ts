@@ -1,6 +1,8 @@
 import errorHandler from "errorhandler";
-
+import { Client, Pool } from "pg";
+import "dotenv/config";
 import app from "./app";
+
 
 app.use(errorHandler());
 
