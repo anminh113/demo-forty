@@ -1,5 +1,10 @@
 # Getting started
+
+- Download and setup postgresql database on local
+
 - Download the repository
+
+- Create .env file based on .env.example file
 
 - Install dependencies
 ```
