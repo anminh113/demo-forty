@@ -3,8 +3,6 @@ import compression from "compression";  // compresses requests
 import bodyParser from "body-parser";
 import path from "path";
 
-import * as homeController from "./controllers/home";
-
 const app = express();
 
 app.set("port", process.env.PORT || 3000);
@@ -18,6 +16,7 @@ app.use(
   express.static(path.join(__dirname, "public"), { maxAge: 31557600000 })
 );
 
-app.get("/", homeController.index);
+app.get("/", require("./components/home/route"));
+app.use("/login", require("./components/login/route"));
 
 export default app;

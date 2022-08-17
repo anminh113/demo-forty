@@ -1,4 +1,16 @@
-<%- include('../core') %>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/main.css?ver=1.1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
 
 <body>
     <%- include("../navigation") %>
@@ -14,7 +26,7 @@
     </section>
     <br>
     <div class="tile is-ancestor">
-        <div class="tile" style="margin-left:30px;margin-right:30px">
+        <div class="tile title-margin">
             <div class="tile is-4 is-vertical is-parent">
                 <div class="tile is-child box">
                     <p class="title">child box</p>
