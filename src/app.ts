@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import path from "path";
 
 import * as homeController from "./controllers/home";
+import * as loginController from "./controllers/login";
 
 const app = express();
 
@@ -19,5 +20,7 @@ app.use(
 );
 
 app.get("/", homeController.index);
+app.get("/login", loginController.index);
+app.post("/login", loginController.login);
 
 export default app;
