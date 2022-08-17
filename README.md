@@ -12,6 +12,7 @@ npm install
 ```
 - Build and run the project
 ```
+npm run migrate up
 npm run build
 npm start
 ```
