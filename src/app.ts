@@ -16,7 +16,7 @@ app.use(
   express.static(path.join(__dirname, "public"), { maxAge: 31557600000 })
 );
 
-app.get("/", require("./components/home/route"));
+app.use("/", require("./components/home/route"));
 app.use("/login", require("./components/login/route"));
 
 export default app;

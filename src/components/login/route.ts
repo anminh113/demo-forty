@@ -1,6 +1,7 @@
-const express = require("express");
-const router = express.Router();
+import express from "express";
 import * as loginController from "./login.controller";
+
+const router = express.Router();
 
 router.get("/", loginController.index);
 router.post("/", loginController.login);
