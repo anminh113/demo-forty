@@ -1,6 +1,6 @@
 # Getting started
 
-- Download and setup postgresql database on local
+- Download and setup postgresql database on local (https://postgresapp.com/downloads.html)
 
 - Download the repository
 
@@ -35,6 +35,6 @@ The full folder structure of this app is explained below:
 
 > **Note!** Make sure you have already built the app using `npm run build`
 
-### Build the app
+### Run migrate
 Run `npm run migrate create my first migration`. It will create file `xxx_my-first-migration.js` in migrations folder.
 Run `npm run migrate up` to install.
