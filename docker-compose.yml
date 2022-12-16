@@ -1,0 +1,30 @@
+version: '3'
+services:
+  app:
+    build: ./
+    container_name: tiger-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app/
+    environment:
+      - DATABASE_URL=postgres://admin:admin@dbserver:5454/admin
+      - API_URL=http://10.34.102.82:8004/docs#/
+    networks:
+      - my-network
+    extra_hosts: 
+      - "dbserver:host-gateway"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:14.1-alpine
+    container_name: tiger-postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=admin
+    ports:
+      - "5454:5432"
+networks:
+  my-network:
+    driver: bridge

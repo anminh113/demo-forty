@@ -1,0 +1,7 @@
+Host:
+-MU net: 10.34.102.82
+-Internet: 0.tcp.ap.ngrok.io:21501
+
+username: phatngu
+password: flflfl
+
